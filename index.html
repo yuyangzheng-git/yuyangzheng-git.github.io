@@ -113,7 +113,7 @@
     new ResizeObserver(resize).observe(hero);resize();updateButton();updateProgress();sync();
   })();
     const contactPanel=document.querySelector('.contact-panel');if(contactPanel){contactPanel.innerHTML='<div class="contact-main"><span class="contact-label">Contact Zachary</span><div class="contact-actions"><a class="contact-line" href="mailto:yuyangzheng0000@gmail.com?subject=Hello%20Zachary">yuyangzheng0000@gmail.com</a><span class="contact-separator">·</span><a class="contact-line" href="tel:+610340778319">+61 0340778319</a></div><div class="contact-methods"><a class="contact-method" href="mailto:yuyangzheng0000@gmail.com?subject=Hello%20Zachary">✉ Email Zachary</a><a class="contact-method" href="tel:+610340778319">↗ Call Zachary</a></div></div><a class="contact-import" href="/assets/zachary-contact.vcf" download="Zachary-contact.vcf">＋ Add to contacts</a>'};const heroActions=document.querySelector('.actions');if(heroActions&&!heroActions.querySelector('[data-contact]')){const cta=document.createElement('a');cta.className='button contact-cta';cta.dataset.contact='true';cta.href='#contact';cta.innerHTML='Contact Zachary <span aria-hidden="true">↘</span>';heroActions.appendChild(cta)}
-    if(contactPanel) contactPanel.id='contact';
+    if(contactPanel){contactPanel.id='contact';const hf=document.createElement('a');hf.className='contact-method';hf.href='https://huggingface.co/ZachacyZ';hf.target='_blank';hf.rel='noopener noreferrer';hf.textContent='◈ Hugging Face';contactPanel.querySelector('.contact-methods')?.appendChild(hf)}
   </script>
 </body>
 </html>
