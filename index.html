@@ -111,6 +111,7 @@
     const progress=document.querySelector('.scroll-progress');let scrollFrame=0;function updateProgress(){scrollFrame=0;const length=document.documentElement.scrollHeight-innerHeight;progress.style.transform=`scaleX(${length>0?Math.min(scrollY/length,1):0})`}addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(updateProgress)},{passive:true});addEventListener('resize',updateProgress);
     new ResizeObserver(resize).observe(hero);resize();updateButton();updateProgress();sync();
   })();
+    const contactPanel=document.querySelector('.contact-panel');if(contactPanel&&!contactPanel.querySelector('[data-hf]')){const hf=document.createElement('a');hf.className='contact-link';hf.dataset.hf='true';hf.href='https://huggingface.co/ZachacyZ';hf.target='_blank';hf.rel='noopener noreferrer';hf.textContent='Hugging Face ↗';contactPanel.appendChild(hf)}
   </script>
 </body>
 </html>
